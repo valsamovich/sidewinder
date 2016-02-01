@@ -2,6 +2,7 @@
 
 import csv
 
+
 # open data fie using csv module
 def open_with_csv(filename):
     # create a list
@@ -9,7 +10,7 @@ def open_with_csv(filename):
     # open a file with utf encoding
     with open(filename, encoding='utf-8') as tsvin:
         # read line with csv reader
-        tie_reader = csv.reader(tsvin, delimiter = '\t')
+        tie_reader = csv.reader(tsvin, delimiter='\t')
         # for each line in data file upend to a list
         for line in tie_reader:
             data.append(line)
