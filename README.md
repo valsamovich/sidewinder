@@ -1,3 +1,7 @@
-# python-technologies
+# sidewinder [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE)
 
-Python is a widely used high-level, general-purpose, interpreted, dynamic programming language.
+Collection of python examples. Why sidewinder? [Find out here.](http://www.thesaurus.net/sidewinder)
+
+## Contribution
+
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a fork, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/).
