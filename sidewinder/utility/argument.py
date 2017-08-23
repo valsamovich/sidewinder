@@ -21,6 +21,10 @@ def parse_arguments():
                         help='The end number - format <integer>.',
                         type=int,
                         default=100)
+    parser.add_argument('-m',
+                        '--message',
+                        help='The end number - format <string>.',
+                        default='Hello, World!')
     arguments, _ = parser.parse_known_args()
     return arguments
 
@@ -28,7 +32,8 @@ if __name__ == '__main__':
     try:
         args = parse_arguments()
         for i in range(args.start, args.end):
-            print i
+            if i == 9:
+                print args.message
     except Exception, e:
         print('Exception: {arg}'.format(arg=e))
         raise
