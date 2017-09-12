@@ -1,6 +1,6 @@
 # sidewinder [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE)
 
-Collection of Python examples. Why sidewinder? [Find out here.](http://www.thesaurus.net/sidewinder)
+Collection of Python example(s). Why sidewinder? [Find out here.](http://www.thesaurus.net/sidewinder)
 
 ## Contribution
 
