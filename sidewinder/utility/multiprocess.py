@@ -15,6 +15,7 @@ def f(x):
     else:
         return None
 
+
 if __name__ == '__main__':
     # specify number of pools
     p = Pool(processes=2)

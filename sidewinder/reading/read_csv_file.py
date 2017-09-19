@@ -1,4 +1,5 @@
-#!/usr/local/bin/python2.7
+#!/usr/bin/env python2.7
+# coding=utf-8
 
 import csv
 import codecs
@@ -19,7 +20,8 @@ def open_with_csv(input_file):
     return data
 
 
-# open file with csv
-data_from_csv = open_with_csv('sample_data.csv')
-# print the header
-print data_from_csv[0]
+if __name__ == '__main__':
+    # open file with csv
+    data_from_csv = open_with_csv('sample_data.csv')
+    # print the header
+    print data_from_csv[0]

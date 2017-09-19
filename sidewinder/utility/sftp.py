@@ -2,17 +2,27 @@
 
 import pysftp
 
-try:
-    # open connection to ftp server
-    sftp = pysftp.Connection(host=ftp_host,
-                             username=ftp_user,
-                             password=ftp_pass,
-                             port=int(ftp_port))
+ftp_host = '***'
+ftp_user = '***'
+ftp_pass = '***'
+ftp_port = '***'
 
-    sftp.pwd()
 
-    # close the ftp connection
-    sftp.close()
+def sftp_conn():
+    try:
+        # open connection to ftp server
+        sftp = pysftp.Connection(host=ftp_host,
+                                 username=ftp_user,
+                                 password=ftp_pass,
+                                 port=int(ftp_port))
 
-except Exception, e:
-    print str(e)
+        sftp.pwd()
+
+        # close the ftp connection
+        sftp.close()
+    except Exception, e:
+        print str(e)
+
+
+if __name__ == '__main__':
+    sftp_conn()
