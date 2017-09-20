@@ -64,7 +64,7 @@ def read_file():
     """
     # Import your data
     # TODO: not working, need a fix.
-    data = np.loadtxt('data.txt', skiprows=1)
+    data = np.loadtxt('np_data.txt', skiprows=1)
     print data
 
 
