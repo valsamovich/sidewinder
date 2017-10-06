@@ -24,8 +24,10 @@ def create_array():
     Print different types of arrays.
     """
     # one dimension array.
+    print 'One dimension array.'
     print np.array([1, 2, 3])
     # two dimension array.
+    print 'Two dimension array.'
     print np.array([[1, 2], [3, 4]])
 
 
@@ -51,11 +53,11 @@ def empty_array():
     # create array of ones: 3 rows, 4 columns
     print np.ones((3, 4))
     # create array of zeros
-    print np.zeros((2, 3, 4), dtype=np.int16)
+    print np.zeros((2, 3, 4), dtype=np.float16)
     # create array with random values
     print np.random.random((2, 2))
     # create a full array
-    print np.full((2, 2), 7)
+    print np.full((2, 2), 122, dtype=np.int16)
 
 
 def read_file():
