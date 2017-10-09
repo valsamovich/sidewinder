@@ -9,6 +9,13 @@ computer mathematical models of problems in Science and Engineering.
 
 import numpy as np
 
+one_d = np.array([1, 2, 3])
+two_d = np.array([[1, 2, 3],
+                  [4, 5, 6]])
+three_d = np.array([[[11, 25, 13],
+                     [24, 75, 56]],
+                    [[75, 15, 55],
+                     [20, 21, 29]]])
 
 def to_string(val):
     """
@@ -24,11 +31,17 @@ def create_array():
     Print different types of arrays.
     """
     # one dimension array.
-    print 'One dimension array.'
-    print np.array([1, 2, 3])
+    print '1-dimension array.'
+    print one_d
+    print ''
+
     # two dimension array.
-    print 'Two dimension array.'
-    print np.array([[1, 2], [3, 4]])
+    print '2-dimension array.'
+    print two_d
+    print ''
+
+    print '3-dimensional array'
+    print three_d
 
 
 def array_attributes():
@@ -64,9 +77,15 @@ def read_file():
     """
     Read files.
     """
-    # Import your data
-    # TODO: not working, need a fix.
-    data = np.loadtxt('np_data.txt', skiprows=1)
+    # by using getfromtxt()
+    print 'By using getfromtxt()'
+    data = np.genfromtxt('data.csv', delimiter=',', skiprows=1)
+    print data
+    print ''
+    # by using loadtxt()
+    print 'By using loadtxt()'
+    data = np.loadtxt('data.csv', delimiter=',', usecols=(1, 2),
+                      unpack=True, skiprows=1)
     print data
 
 
@@ -91,4 +110,4 @@ def slicing():
 
 
 if __name__ == '__main__':
-    slicing()
+    read_file()
