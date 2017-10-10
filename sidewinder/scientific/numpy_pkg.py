@@ -79,12 +79,12 @@ def read_file():
     """
     # by using getfromtxt()
     print 'By using getfromtxt()'
-    data = np.genfromtxt('data.csv', delimiter=',', skiprows=1)
+    data = np.genfromtxt('data_1.csv', delimiter=',', skiprows=1)
     print data
     print ''
     # by using loadtxt()
     print 'By using loadtxt()'
-    data = np.loadtxt('data.csv', delimiter=',', usecols=(1, 2),
+    data = np.loadtxt('data_1.csv', delimiter=',', usecols=(1, 2),
                       unpack=True, skiprows=1)
     print data
 
