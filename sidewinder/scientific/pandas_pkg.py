@@ -32,7 +32,29 @@ def functions():
     print ''
 
 
+def merges():
+    print '1st DataFrame'
+    df1 = pd.DataFrame({
+        'city': ['new york', 'chicago', 'orlando'],
+        'temperature': [21, 14, 35]
+    })
+    print df1
+    print ''
+
+    print '2nd DataFrame'
+    df2 = pd.DataFrame({
+        'city': ['new york', 'chicago', 'orlando'],
+        'humidity': [65, 68, 75]
+    })
+    print df2
+    print ''
+
+    # Inner merge
+    print 'Inner join'
+    print pd.merge(df1, df2, on='city')
+
+
 if __name__ == '__main__':
-    functions()
+    merges()
 
 

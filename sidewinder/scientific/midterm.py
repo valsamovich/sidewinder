@@ -28,7 +28,7 @@ def q3():
     array = np.ones((2,3,4))
     print array
     array = array * 2
-    print arraygit
+    print array
     print array.sum(axis=None)
 
 
