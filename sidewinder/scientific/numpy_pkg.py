@@ -8,6 +8,7 @@ computer mathematical models of problems in Science and Engineering.
 """
 
 import numpy as np
+import random as rand
 
 one_d = np.array([1, 2, 3])
 two_d = np.array([[1, 2, 3],
@@ -109,5 +110,9 @@ def slicing():
     print arr[1, ...]
 
 
+def random_func():
+    print rand.uniform(0, 1)
+
+
 if __name__ == '__main__':
-    read_file()
+    random_func()
