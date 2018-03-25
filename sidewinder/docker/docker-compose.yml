@@ -1,9 +1,20 @@
 version: '3'
 
 services:
+    # python product-service
     product-service:
         build: ./product
         volumes:
             - ./product:/usr/src/app
         ports:
             - 5001:80
+
+    # php website
+    website:
+        image: php:apache
+        volumes:
+            - ./website:/var/www/html
+        ports:
+            - 5000:80
+        depends_on:
+            - product-service
