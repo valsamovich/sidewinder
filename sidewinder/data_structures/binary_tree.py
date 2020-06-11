@@ -16,35 +16,57 @@ class BinaryTree(object):
         self.root = Node(root)
 
     def print_tree(self, traversal_type):
-        if traversal_type == 'preorder':
-            return self.preorder_print(self.root, '')
-        else:
-            print('Traversal type ' + str(traversal_type) + ' is not supported')
-            return False
+        if traversal_type == "preorder":
+            return self.preorder_print(tree.root, "")
+        elif traversal_type == "inorder":
+            return self.inorder_print(tree.root, "")
+        elif traversal_type == "postorder":
+            return self.postorder_print(tree.root, "")
 
     def preorder_print(self, start, traversal):
-        """ Root -> Left -> Right """
+        """ Preorder traversal. Root -> Left -> Right """
         if start:
             traversal += (str(start.value) + '-')
             traversal = self.preorder_print(start.left, traversal)
             traversal = self.preorder_print(start.right, traversal)
         return traversal
 
-# Tree representation:
+    def inorder_print(self, start, traversal):
+        """ In-order traversal. Left -> Root - Right """
+        if start:
+            traversal = self.inorder_print(start.left, traversal)
+            traversal += (str(start.value) + '-')
+            traversal = self.inorder_print(start.right, traversal)
+        return traversal
+
+    def postorder_print(self, start, traversal):
+        """ Post-order traversal. Left -> Right -> Root """
+        if start:
+            traversal = self.preorder_print(start.left, traversal)
+            traversal = self.preorder_print(start.right, traversal)
+            traversal += (str(start.value) + '-')
+        return traversal
+
+# Tree representation.
 #          1
 #        /   \
 #       2     3
 #      / \   / \
 #     4   5 6   7
+# Pre-order:    1-2-4-5-3-6-7-
+# In-order:     4-2-5-1-6-3-7-
+# Post-order:   2-4-5-3-6-7-1-
 
 
-# Tree setup:
-binary_tree = BinaryTree(1)
-binary_tree.left = Node(2)
-binary_tree.right = Node(3)
-binary_tree.left.left = Node(4)
-binary_tree.left.right = Node(5)
-binary_tree.right.left = Node(6)
-binary_tree.right.right = Node(7)
+# Binary tree setup.
+tree = BinaryTree(1)
+tree.root.left = Node(2)
+tree.root.right = Node(3)
+tree.root.left.left = Node(4)
+tree.root.left.right = Node(5)
+tree.root.right.left = Node(6)
+tree.root.right.right = Node(7)
 
-print(binary_tree.print_tree('preorder'))
+print(tree.print_tree('preorder'))
+print(tree.print_tree('inorder'))
+print(tree.print_tree('postorder'))
