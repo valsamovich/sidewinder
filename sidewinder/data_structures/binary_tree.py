@@ -56,6 +56,7 @@ class BinaryTree(object):
 # Pre-order:    1-2-4-5-3-6-7-
 # In-order:     4-2-5-1-6-3-7-
 # Post-order:   2-4-5-3-6-7-1-
+# It's all DFS Depth First Search
 
 
 # Binary tree setup.
